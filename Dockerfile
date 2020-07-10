@@ -18,3 +18,6 @@ FROM alpine:3.10 AS final
 
 # copy from builder
 COPY --from=builder /go/bin/vegeta /usr/bin/vegeta
+
+# set workdir
+WORKDIR /vegeta
